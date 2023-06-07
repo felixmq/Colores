@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #A7465449;
+    
+}
+
+.color{
+    margin-top: 300px;
+    text-align: center;
+}
+
+#createrColor{
+    display: block;
+    color: azure;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+button{
+    background-color: black;
+    color: azure;
+    padding: 15px;
+}
