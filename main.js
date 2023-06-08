@@ -1,22 +1,32 @@
-const createrColor = document.getElementById('createrColor');
+const paleta = document.getElementById("paleta");
+const color = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","F"];
+const paleta_size = 4;
 
 
-let nuevoColor = []
-const div = document.getElementById('div');
+const createPaleta = () => {
+    for (let i = 0; i < 4; i++){
+        const palletaElement = document.createElement('div');
+        palletaElement.classList.add('paletaItem');
+        paleta.appendChild(palletaElement);
+    }
+    otraPaleta()
+}
 
-function getColor(){
-    let color = "#";
-    let letter = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","F"];
+const colores = (element) => {
+    let colorPaleta = "#";
+    for (let i = 0; i < 6; i++){
+        const randomElement = color[Math.floor(Math.random() * color.length)];
+        colorPaleta += randomElement;
+    }
+    element.style.backgroundColor = colorPaleta;
+    element.innerHTML = `<span class='colorHex'>${colorPaleta}</span>`
+}
 
-    for(let i = 0 ;i < 6; i++){
-        color = color + letter[Math.floor(Math.random() * letter.length)];
-        
-    } document.body.style.background = color
-    createrColor.innerHTML = color
-    
-}   
-   
+const otraPaleta = () => {
+    for (let i = 0; i < 4; i++) {
+        colores(paleta.children[i])
+    }
+}
 
+createPaleta()
 
-
-console.log(getColor())

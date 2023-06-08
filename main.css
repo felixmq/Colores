@@ -1,24 +1,23 @@
-body{
+body {
     margin: 0;
-    padding: 0;
-    background-color: #A7465449;
-    
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding-top: 30px;
+    font-weight: bold;
+    font-size: 30px;
 }
 
-.color{
-    margin-top: 300px;
-    text-align: center;
+#paleta{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    border-radius: 4px;
 }
 
-#createrColor{
-    display: block;
-    color: azure;
-    font-size: 50px;
-    text-transform: uppercase;
-}
-
-button{
-    background-color: black;
-    color: azure;
-    padding: 15px;
+.paletaItem span {
+    padding: 10px;
+    color:#000000;
+    display: inline-block;
 }
